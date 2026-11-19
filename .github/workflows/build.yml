@@ -15,7 +15,7 @@ jobs:
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v4
       with:
-        validate-wrappers: false  # 关闭 wrapper 校验，跳过旧版 jar 校验
+        validate-wrappers: false # 关键行：关闭 wrapper 校验
 
     - name: Build with Gradle
       run: |
