@@ -13,7 +13,11 @@ jobs:
           distribution: 'temurin'
       - name: Build with Gradle
         run: |
+          echo "====仓库根目录文件===="
+          ls -la
+          echo "====进入MockGpsShizuku后===="
           cd MockGpsShizuku
+          ls -la
           chmod +x gradlew
           ./gradlew assembleDebug
       - name: Upload APK
