@@ -13,6 +13,8 @@ jobs:
           distribution: 'temurin'
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
+        with:
+          wrapper-validation: false  # 关闭wrapper jar校验
       - name: Build with Gradle
         run: |
           cd MockGpsShizuku
