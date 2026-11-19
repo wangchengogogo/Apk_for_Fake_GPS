@@ -11,13 +11,10 @@ jobs:
         with:
           java-version: '11'
           distribution: 'temurin'
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v4
-        with:
-          wrapper-validation: false  # 关闭wrapper jar校验
       - name: Build with Gradle
         run: |
           cd MockGpsShizuku
+          chmod +x gradlew
           ./gradlew assembleDebug
       - name: Upload APK
         uses: actions/upload-artifact@v4
